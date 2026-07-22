@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left Card -->
+    <div class="profile-card">
+
+        <div class="avatar">
+            <img src="images/profile.png" alt="Profile">
+        </div>
+
+        <h2>demo</h2>
+        <p>Class 12</p>
+
+        <button>Select Photo</button>
+
+        <div class="info-box">
+            <h4>Display Name</h4>
+            <p>This is the name shown on your dashboard and navigation.</p>
+        </div>
+
+    </div>
+
+    <!-- Right Form -->
+
+    <div class="form-card">
+
+        <h1>Student Profile</h1>
+
+        <label>Name</label>
+        <input type="text" placeholder="demo">
+
+        <div class="row">
+            <div>
+                <label>Age</label>
+                <input type="number" placeholder="19">
+            </div>
+
+            <div>
+                <label>Class</label>
+                <input type="text" placeholder="12">
+            </div>
+        </div>
+
+        <label>Preferred Study Time</label>
+
+        <select>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option selected>Evening</option>
+            <option>Night</option>
+        </select>
+
+        <label>Subjects</label>
+
+        <input type="text" placeholder="Mathematics, Science">
+
+        <label>Study Goals</label>
+
+        <textarea rows="3"></textarea>
+
+        <div class="row">
+
+            <div>
+                <label>Strengths</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div>
+                <label>Areas to Improve</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+        </div>
+
+        <button class="save-btn">Save Profile</button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
