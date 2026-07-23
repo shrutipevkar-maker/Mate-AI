@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - Focus Mode</title>
+
+    <link rel="stylesheet" href="studyhub style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="background-glow glow1"></div>
+<div class="background-glow glow2"></div>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header>
+
+        <p class="tag">
+            DISTRACTION-FREE ZONE
+        </p>
+
+        <h1>StudyHub</h1>
+
+        <p class="subtitle">
+            Your minutes and streak are saved while the timer runs.
+        </p>
+
+    </header>
+
+    <div class="main-grid">
+
+        <!-- LEFT PANEL -->
+
+        <div class="left-card">
+
+            <input
+            type="text"
+            id="subject"
+            placeholder="What subject are you studying?">
+
+            <div class="mode-switch">
+
+                <button class="active">
+                    Focus
+                </button>
+
+                <button>
+                    Break
+                </button>
+
+            </div>
+
+            <div class="timer-circle">
+
+                <span class="session-text">
+                    FOCUS SESSION
+                </span>
+
+                <h2 id="timer">
+                    25:00
+                </h2>
+
+            </div>
+
+            <div class="controls">
+
+                <button id="reset">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </button>
+
+                <button id="start" class="play">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <select id="timeSelect">
+                    <option>25m</option>
+                    <option>15m</option>
+                    <option>45m</option>
+                    <option>60m</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+
+        <div class="right-panel">
+
+            <!-- Ambient -->
+
+            <div class="card">
+
+                <h3>Ambient Focus</h3>
+
+                <p>
+                    Play a soundscape to help you concentrate.
+                </p>
+
+                <div class="sound-grid">
+
+                    <button class="sound-btn">
+                        <i class="fa-solid fa-cloud-rain"></i>
+                        <span>Soft Rain</span>
+                    </button>
+
+                    <button class="sound-btn">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Lo-fi Beats</span>
+                    </button>
+
+                    <button class="sound-btn">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span>Brown Noise</span>
+                    </button>
+
+                    <button class="sound-btn">
+                        <i class="fa-solid fa-headphones"></i>
+                        <span>Library Silence</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Session List -->
+
+            <div class="card">
+
+                <div class="session-header">
+
+                    <h3>Your real sessions</h3>
+
+                    <span class="live">
+                        Live
+                    </span>
+
+                </div>
+
+                <ul id="sessionList">
+
+                    <li>
+                        <span>Maths</span>
+                        <span>1 min</span>
+                    </li>
+
+                    <li>
+                        <span>Physics</span>
+                        <span>1 min</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+//hello
+<script src="script.js"></script>
+
+</body>
+</html>
