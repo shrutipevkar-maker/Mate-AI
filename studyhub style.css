@@ -1,0 +1,384 @@
+* ===========================
+   GOOGLE FONT & RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0b0c18;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background-glow{
+    position:fixed;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    filter:blur(140px);
+    z-index:-1;
+}
+
+.glow1{
+    background:#7b3cff;
+    top:-150px;
+    left:-150px;
+}
+
+.glow2{
+    background:#4c5bff;
+    right:-150px;
+    bottom:-150px;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding:40px 0;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.tag{
+    color:#bba7ff;
+    font-size:13px;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+header h1{
+    font-size:48px;
+    font-weight:700;
+}
+
+.subtitle{
+    margin-top:10px;
+    color:#b8b8c9;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.main-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:30px;
+}
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.left-card,
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:28px;
+    padding:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+#subject{
+    width:100%;
+    padding:16px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:#1b1f38;
+    color:white;
+    font-size:16px;
+}
+
+#subject::placeholder{
+    color:#8f93b4;
+}
+
+/* ===========================
+   MODE SWITCH
+=========================== */
+
+.mode-switch{
+    display:flex;
+    margin-top:25px;
+    background:#17192e;
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.mode-switch button{
+    flex:1;
+    padding:15px;
+    border:none;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.mode-switch .active{
+    background:#7c4dff;
+}
+
+/* ===========================
+   TIMER
+=========================== */
+
+.timer-circle{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    margin:40px auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    border:10px solid #6d48ff;
+
+    box-shadow:
+    0 0 35px rgba(108,72,255,.45),
+    inset 0 0 25px rgba(108,72,255,.25);
+}
+
+.session-text{
+    color:#c7b8ff;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+#timer{
+    margin-top:10px;
+    font-size:72px;
+    font-weight:700;
+}
+
+/* ===========================
+   CONTROLS
+=========================== */
+
+.controls{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+}
+
+.controls button{
+
+    width:58px;
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+}
+
+.play{
+    background:#7c4dff;
+    color:white;
+}
+
+#reset{
+    background:#262944;
+    color:white;
+}
+
+.controls button:hover{
+    transform:scale(1.08);
+}
+
+select{
+    padding:14px 18px;
+    border-radius:14px;
+    border:none;
+    background:#20233d;
+    color:white;
+    cursor:pointer;
+}
+
+/* ===========================
+   RIGHT PANEL
+=========================== */
+
+.right-panel{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#b6b6ca;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   AMBIENT GRID
+=========================== */
+
+.sound-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.sound-btn{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#1d2139;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.sound-btn i{
+    font-size:22px;
+    color:#8f6fff;
+}
+
+.sound-btn:hover{
+    background:#7c4dff;
+    transform:translateY(-4px);
+}
+
+/* ===========================
+   SESSION CARD
+=========================== */
+
+.session-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.live{
+    background:#24d35d;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+#sessionList{
+    list-style:none;
+}
+
+#sessionList li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    background:#1b2037;
+
+    border-radius:14px;
+
+    transition:.3s;
+}
+
+#sessionList li:hover{
+    background:#2a2e4b;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.main-grid{
+grid-template-columns:1fr;
+}
+
+.timer-circle{
+width:260px;
+height:260px;
+}
+
+#timer{
+font-size:56px;
+}
+
+}
+
+@media(max-width:600px){
+
+header h1{
+font-size:34px;
+}
+
+.sound-grid{
+grid-template-columns:1fr;
+}
+
+.controls{
+flex-wrap:wrap;
+}
+
+.timer-circle{
+width:220px;
+height:220px;
+}
+
+#timer{
+font-size:48px;
+}
+
+}
