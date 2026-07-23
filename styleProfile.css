@@ -1,0 +1,113 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#09111f;
+color:white;
+}
+
+.container{
+width:95%;
+max-width:1300px;
+margin:30px auto;
+display:flex;
+gap:25px;
+}
+
+.profile-card{
+width:300px;
+background:#111827;
+border-radius:20px;
+padding:30px;
+text-align:center;
+}
+
+.avatar img{
+width:120px;
+height:120px;
+border-radius:20px;
+object-fit:cover;
+background:#6d5dfc;
+}
+
+.profile-card h2{
+margin-top:15px;
+}
+
+.profile-card p{
+color:#bdbdbd;
+margin-bottom:20px;
+}
+
+.profile-card button{
+background:#6d5dfc;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.info-box{
+margin-top:30px;
+background:#2b2158;
+padding:15px;
+border-radius:12px;
+text-align:left;
+}
+
+.form-card{
+flex:1;
+background:#111827;
+border-radius:20px;
+padding:30px;
+}
+
+.form-card h1{
+margin-bottom:25px;
+}
+
+label{
+display:block;
+margin-top:15px;
+margin-bottom:6px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:12px;
+background:#1f2937;
+border:1px solid #333;
+border-radius:8px;
+color:white;
+}
+
+.row{
+display:flex;
+gap:20px;
+}
+
+.row div{
+flex:1;
+}
+
+.save-btn{
+margin-top:25px;
+background:#6d5dfc;
+padding:14px 25px;
+border:none;
+border-radius:10px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.save-btn:hover{
+background:#5b4bf0;
+}
