@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Study Planner</title>
+    <link rel="stylesheet" href="styleplanner.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Schedule Planner</h1>
+
+    <div class="stats">
+        <div class="card">
+            <h3 id="weekly">0.0</h3>
+            <p>Weekly Hours</p>
+        </div>
+
+        <div class="card">
+            <h3 id="monthly">0.0</h3>
+            <p>Monthly Hours</p>
+        </div>
+
+        <div class="card">
+            <h3 id="sessions">0</h3>
+            <p>Sessions</p>
+        </div>
+
+        <div class="card">
+            <h3 id="tasks">0</h3>
+            <p>Tasks Done</p>
+        </div>
+    </div>
+
+    <div class="calendar">
+
+        <div class="header">
+            <button id="prev">&#10094;</button>
+            <h2 id="monthYear"></h2>
+            <button id="next">&#10095;</button>
+        </div>
+
+        <div class="days">
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+            <div>Sun</div>
+        </div>
+
+        <div id="dates" class="dates"></div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
