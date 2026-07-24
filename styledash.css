@@ -1,0 +1,259 @@
+/* ==========================
+   Google Font
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#050816;
+    color:#fff;
+    overflow:hidden;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* ==========================
+Sidebar
+========================== */
+
+.sidebar{
+    width:280px;
+    background:rgba(18,20,40,.95);
+    backdrop-filter:blur(20px);
+    border-right:1px solid rgba(255,255,255,.08);
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-icon{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#6d5dfc,#8d5bff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+}
+
+.logo h2{
+    font-size:22px;
+    font-weight:600;
+}
+
+.logo span{
+    color:#8b5cf6;
+}
+
+.logo p{
+    font-size:12px;
+    color:#999;
+}
+
+.profile{
+    margin:40px 0;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.avatar{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#7c3aed,#4f46e5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.profile h4{
+    font-size:17px;
+}
+
+.profile p{
+    color:#9aa0b3;
+    font-size:13px;
+}
+
+/* Navigation */
+
+nav{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#c8c8d3;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 18px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#272d52;
+}
+
+nav a.active{
+    background:linear-gradient(135deg,#5b4fff,#8b5cf6);
+    color:#fff;
+}
+
+.badge{
+    margin-left:auto;
+    background:#ff4c97;
+    padding:3px 8px;
+    border-radius:50px;
+    font-size:10px;
+}
+
+/* Bottom */
+
+.sidebar-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:30px;
+}
+
+.theme-btn,
+.logout{
+    border:none;
+    background:#20274c;
+    color:white;
+    padding:12px 18px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.logout{
+    width:50px;
+}
+
+/* ==========================
+Main Content
+========================== */
+
+.main-content{
+    flex:1;
+    padding:45px;
+    position:relative;
+    overflow-y:auto;
+}
+
+header{
+    margin-bottom:35px;
+}
+
+.top-text{
+    color:#8b5cf6;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+header h1{
+    margin-top:10px;
+    font-size:42px;
+}
+
+header p{
+    margin-top:10px;
+    color:#9da2b4;
+}
+
+/* Background Blur */
+
+.bg-circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.25;
+    z-index:-1;
+}
+
+.one{
+    width:300px;
+    height:300px;
+    background:#6d5dfc;
+    top:-50px;
+    right:100px;
+}
+
+.two{
+    width:250px;
+    height:250px;
+    background:#00c2ff;
+    bottom:50px;
+    left:250px;
+}
+
+.three{
+    width:200px;
+    height:200px;
+    background:#ff4ec9;
+    top:300px;
+    right:0;
+}
+
+/* ==========================
+Stats Cards
+========================== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:rgba(28,31,61,.8);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+.card i{
+    color:#8b5cf6;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.card small{
+    color:#9ea4ba;
+}
+
+.card h2{
+    margin-top:10px;
+    font-size:28px;
+}
