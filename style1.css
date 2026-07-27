@@ -201,3 +201,23 @@ color:#5de4ff;
 font-weight:bold;
 cursor:pointer;
 }
+.guest{
+width:100%;
+padding:18px;
+margin-top:20px;
+background:#202942;
+border:1px solid #4b5d8a;
+color:white;
+border-radius:15px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+.guest:hover{
+background:#2d3960;
+}
+
+.guest i{
+margin-right:10px;
+}
