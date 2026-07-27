@@ -1,0 +1,406 @@
+/* ==========================
+   PLAYER
+========================== */
+
+.player{
+
+    background:#121827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:22px;
+
+    margin-bottom:28px;
+
+}
+
+.song{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:18px;
+
+}
+
+.song img{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:14px;
+
+    object-fit:cover;
+
+}
+
+.song h3{
+
+    font-size:18px;
+
+    margin-bottom:4px;
+
+}
+
+.song span{
+
+    color:#9CA3AF;
+
+    font-size:14px;
+
+}
+
+.heart{
+
+    margin-left:auto;
+
+    color:#9CA3AF;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.heart:hover{
+
+    color:#EF4444;
+
+}
+
+.player input[type="range"]{
+
+    width:100%;
+
+    margin:15px 0;
+
+    accent-color:#22C55E;
+
+    cursor:pointer;
+
+}
+
+.controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin:18px 0;
+
+}
+
+.controls button{
+
+    background:none;
+
+    border:none;
+
+    color:#C4C7CF;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.controls button:hover{
+
+    color:#22C55E;
+
+}
+
+.main-play{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    background:#22C55E !important;
+
+    color:#fff !important;
+
+    font-size:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(34,197,94,.35);
+
+}
+
+.main-play:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================
+   FOR YOU
+========================== */
+
+.recommend{
+
+    margin-top:10px;
+
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.section-header h2{
+
+    font-size:24px;
+
+}
+
+.section-header span{
+
+    color:#9CA3AF;
+
+    font-size:14px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:22px;
+
+}
+
+.card{
+
+    background:#121827;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 35px rgba(0,0,0,.35);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:190px;
+
+    object-fit:cover;
+
+}
+
+.card-info{
+
+    padding:18px;
+
+}
+
+.card-info h4{
+
+    font-size:18px;
+
+    margin-bottom:6px;
+
+}
+
+.card-info p{
+
+    color:#9CA3AF;
+
+    font-size:14px;
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0B1020;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2A3348;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#3B455D;
+
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+.header,
+.hero,
+.player,
+.card{
+
+    animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+    .header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        align-items:flex-start;
+
+    }
+
+    .actions{
+
+        width:100%;
+
+    }
+
+    .spotify-btn{
+
+        flex:1;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-content{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .play-btn{
+
+        align-self:flex-end;
+
+    }
+
+    .tabs{
+
+        flex-wrap:wrap;
+
+    }
+
+    .tabs button{
+
+        flex:1;
+
+    }
+
+}
+
+@media(max-width:520px){
+
+    body{
+
+        padding:16px;
+
+    }
+
+    .title{
+
+        font-size:22px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .controls{
+
+        gap:12px;
+
+    }
+
+}

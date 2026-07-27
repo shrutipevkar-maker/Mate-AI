@@ -1,89 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Profile</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyTunes</title>
+
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
 
 <div class="container">
 
-    <!-- Left Card -->
-    <div class="profile-card">
+    <!-- Header -->
 
-        <div class="avatar">
-            <img src="images/profile.png" alt="Profile">
-        </div>
+    <header class="header">
 
-        <h2>demo</h2>
-        <p>Class 12</p>
+        <div class="brand">
 
-        <button>Select Photo</button>
-
-        <div class="info-box">
-            <h4>Display Name</h4>
-            <p>This is the name shown on your dashboard and navigation.</p>
-        </div>
-
-    </div>
-
-    <!-- Right Form -->
-
-    <div class="form-card">
-
-        <h1>Student Profile</h1>
-
-        <label>Name</label>
-        <input type="text" placeholder="demo">
-
-        <div class="row">
-            <div>
-                <label>Age</label>
-                <input type="number" placeholder="19">
+            <div class="logo">
+                🎵
             </div>
 
             <div>
-                <label>Class</label>
-                <input type="text" placeholder="12">
-            </div>
-        </div>
 
-        <label>Preferred Study Time</label>
+                <div class="title">
+                    StudyTunes
+                    <span class="beta">BETA</span>
+                </div>
 
-        <select>
-            <option>Morning</option>
-            <option>Afternoon</option>
-            <option selected>Evening</option>
-            <option>Night</option>
-        </select>
+                <div class="subtitle">
+                    Smart music for better focus.
+                </div>
 
-        <label>Subjects</label>
-
-        <input type="text" placeholder="Mathematics, Science">
-
-        <label>Study Goals</label>
-
-        <textarea rows="3"></textarea>
-
-        <div class="row">
-
-            <div>
-                <label>Strengths</label>
-                <textarea rows="3"></textarea>
-            </div>
-
-            <div>
-                <label>Areas to Improve</label>
-                <textarea rows="3"></textarea>
             </div>
 
         </div>
 
-        <button class="save-btn">Save Profile</button>
+        <div class="actions">
 
-    </div>
+            <button class="spotify-btn">
+                <i class="fa-brands fa-spotify"></i>
+                Connect Spotify
+            </button>
+
+            <button class="icon-btn">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Navigation -->
+
+    <nav class="tabs">
+
+        <button class="active">For You</button>
+        <button>Search</button>
+        <button>Your Library</button>
+        <button>Liked Songs</button>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-top">
+
+            <span>YOUR SESSION • FOCUS MODE • 25 MIN</span>
+
+        </div>
+
+        <div class="hero-content">
+
+            <img src="https://picsum.photos/120/120?random=11" alt="cover">
+
+            <div class="hero-text">
+
+                <small>Recommended: Deep Focus</small>
+
+                <h2>Deep Focus Flow</h2>
+
+                <p>StudyMate Sessions</p>
+
+                <button class="why-btn">
+                    Why this?
+                </button>
+
+            </div>
+
+            <button class="play-btn">
+
+                <i class="fa-solid fa-play"></i>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Music Player -->
+
+    <section class="player">
+
+        <div class="song">
+
+            <img src="https://picsum.photos/80?random=20">
+
+            <div>
+
+                <h3>Piano for Proofs</h3>
+
+                <span>Aria Study</span>
+
+            </div>
+
+            <i class="fa-regular fa-heart heart"></i>
+
+        </div>
+
+        <input type="range" value="20">
+
+        <div class="controls">
+
+            <button>
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+
+            <button>
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+            <button class="main-play">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <button>
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+
+            <button>
+                <i class="fa-solid fa-volume-low"></i>
+            </button>
+
+        </div>
+
+        <input type="range" value="35">
+
+    </section>
+
+    <!-- Recommendations -->
+
+    <section class="recommend">
+
+        <div class="section-header">
+
+            <h2>For You</h2>
+
+            <span>6 Tracks</span>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img src="https://picsum.photos/300/220?random=31">
+
+                <div class="card-info">
+
+                    <h4>Ocean Calm</h4>
+
+                    <p>Ambient Focus</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://picsum.photos/300/220?random=41">
+
+                <div class="card-info">
+
+                    <h4>Code Waves</h4>
+
+                    <p>Programming Mix</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://picsum.photos/300/220?random=51">
+
+                <div class="card-info">
+
+                    <h4>Night Library</h4>
+
+                    <p>Lo-Fi Sessions</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </div>
 
