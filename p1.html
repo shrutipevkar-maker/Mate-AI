@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner</title>
+
+    <style>
+        body{
+            font-family:Arial, sans-serif;
+            background:#f4f4f4;
+            padding:30px;
+        }
+          //hello1
+        .container{
+            max-width:700px;
+            margin:auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.2);
+        }
+
+        h2{
+            text-align:center;
+        }
+
+        input, textarea, button{
+            width:100%;
+            padding:10px;
+            margin:8px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            background:#007bff;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+
+        table{
+            width:100%;
+            margin-top:20px;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:10px;
+            text-align:left;
+        }
+
+        th{
+            background:#007bff;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>Study Planner</h2>
+
+<input type="date" id="date">
+
+<input type="text" id="subject" placeholder="Subject">
+
+<input type="time" id="start">
+
+<input type="time" id="end">
+
+<textarea id="notes" placeholder="Notes"></textarea>
+
+<button onclick="saveEntry()">Save Planner Entry</button>
+
+<button onclick="generateSchedule()">Generate Weekly Schedule</button>
+
+<table>
+
+<thead>
+<tr>
+<th>Date</th>
+<th>Subject</th>
+<th>Time</th>
+<th>Notes</th>
+</tr>
+</thead>
+
+<tbody id="plannerTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+
+const API="/api/planner";
+
+async function loadEntries(){
+
+    const response=await fetch(API);
+    const data=await response.json();
+
+    const table=document.getElementById("plannerTable");
+    table.innerHTML="";
+
+    data.forEach(entry=>{
+
+        table.innerHTML+=`
+        <tr>
+            <td>${entry.date}</td>
+            <td>${entry.subject}</td>
+            <td>${entry.start_time} - ${entry.end_time}</td>
+            <td>${entry.notes}</td>
+        </tr>
+        `;
+
+    });
+
+}
+
+async function saveEntry(){
+
+    const body={
+
+        date:document.getElementById("date").value,
+        subject:document.getElementById("subject").value,
+        start_time:document.getElementById("start").value,
+        end_time:document.getElementById("end").value,
+        notes:document.getElementById("notes").value,
+
+        checklist:[],
+        planned_pomodoros:2,
+        completed_pomodoros:0,
+        event_type:"",
+        event_title:""
+
+    };
+
+    await fetch(API,{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(body)
+    });
+
+    alert("Planner Entry Saved");
+
+    loadEntries();
+
+}
+
+async function generateSchedule(){
+
+    await fetch(API,{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            generate:true
+        })
+    });
+
+    alert("Weekly Schedule Generated");
+
+    loadEntries();
+
+}
+
+loadEntries();
+
+</script>
+
+</body>
+</html>
